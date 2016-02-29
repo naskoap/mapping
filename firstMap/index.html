@@ -3,6 +3,7 @@
         <meta charset="utf-8"> 
         <link rel="stylesheet" href="leaflet.css"/>
         <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"> </script>
+        <script src="building.js"></script>
         <link rel="stylesheet" href="leaflet-routing-machine.css" />
         <script src="leaflet-routing-machine.js"></script>
       </head>
@@ -15,6 +16,26 @@
     id: 'naskoap.p9081107',
     accessToken: 'pk.eyJ1IjoibmFza29hcCIsImEiOiJjaWw0aXdwcXkwNHhldTdseW44YjV0eGl5In0.vijDAZDiTmtYHaE_t_ft7w'
 }).addTo(map);
+            
+        var cannon = new Building("Cannon", "A Dorm in Sewanee", 
+                    [new L.LatLng(35.20464,-85.92246),
+                    new L.LatLng(35.20471,-85.92246),
+					new L.LatLng(35.20471,-85.92249),
+					new L.LatLng(35.20477,-85.92250),
+					new L.LatLng(35.20477,-85.92256),
+					new L.LatLng(35.20473,-85.92257),
+					new L.LatLng(35.20473,-85.92271),
+					new L.LatLng(35.20477,-85.92270),
+					new L.LatLng(35.20477,-85.92277),
+					new L.LatLng(35.20473,-85.92277),
+					new L.LatLng(35.20473,-85.92278),
+					new L.LatLng(35.20469,-85.92279),
+					new L.LatLng(35.20469,-85.92282),
+					new L.LatLng(35.20464,-85.92282),
+					new L.LatLng(35.20464,-85.92268),
+					new L.LatLng(35.20465,-85.92268)]
+                                  );
+            
             /*var marker = L.marker([35.20509308, -85.92068195]).addTo(map);
             var circle = L.circle([35.20677623, -85.91647625], 100, {
                color: 'red',
@@ -32,12 +53,12 @@
             var popup = L.popup();*/
             L.Routing.control({
   waypoints: [
-    L.latLng(35.20748, -85.90897),
-    L.latLng(36.14896, -86.78375)
+    L.LatLng(35.20748, -85.90897),
+    L.LatLng(36.14896, -86.78375)
   ]
 }).addTo(map);
             
-            var mrkr = L.marker({draggable:'true'});
+            /*var mrkr = L.marker({draggable:'true'});
             
             function onMapClick(e) {
                 mrkr
@@ -47,7 +68,7 @@
                     .openPopup();
             }
             
-            map.on('click', onMapClick);
+            map.on('click', onMapClick);*/
             
         </script>
     </body>
